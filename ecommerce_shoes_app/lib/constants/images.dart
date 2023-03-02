@@ -31,6 +31,7 @@ class AppImages {
   static const paypal = '${rootPath}paypal.png';
   static const visa = '${rootPath}visa.png';
   static const splashImage = '${rootPath}splash.jpg';
+  static const userImage = '${rootPath}user.png';
 
 
   //no image placeholder
