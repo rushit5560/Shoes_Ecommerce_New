@@ -2,7 +2,7 @@ import 'dart:convert';
 import 'dart:developer';
 import 'package:ecommerce_shoes_app/models/sign_up_screen/sign_up_model.dart';
 import 'package:ecommerce_shoes_app/screen/index_screen/index_screen.dart';
-import 'package:ecommerce_shoes_app/utils/common_function.dart';
+import 'package:ecommerce_shoes_app/utils/user_prefs_data.dart';
 import 'package:fluttertoast/fluttertoast.dart';
 import 'package:http/http.dart' as http;
 import 'package:ecommerce_shoes_app/constants/api_url.dart';
@@ -23,7 +23,7 @@ class SignUpScreenController extends GetxController {
   // TextEditingController confirmPasswordController =
   //     TextEditingController(text: "12345678");
 
-  CommonFunctions commonFunctions = CommonFunctions();
+  UserPrefsData commonFunctions = UserPrefsData();
 
   Future<void> signUpUserFunction() async {
     isLoading(true);
