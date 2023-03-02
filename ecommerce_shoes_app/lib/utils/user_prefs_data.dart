@@ -10,7 +10,7 @@ class UserPrefsData {
   String userNameKey = "userName";
   String userEmailKey = "userEmail";
 
- hideKeyBoard() {
+  hideKeyBoard() {
     FocusManager.instance.primaryFocus!.unfocus();
   }
 
@@ -33,7 +33,7 @@ class UserPrefsData {
     // prefs.setString('password', password);
 
     UserDetails.isUserLoggedIn = prefs.getBool('userLoggedInStatus') ?? false;
-    UserDetails.userId = prefs.getString('id') ?? "0";
+    UserDetails.userId = prefs.getInt('id') ?? 0;
     // UserDetails.token = prefs.getString('token') ?? "";
     // UserDetails.userName = prefs.getString('userName') ?? "";
     // UserDetails.userEmail = prefs.getString('userEmail') ?? "";
@@ -56,7 +56,7 @@ class UserPrefsData {
     prefs.setString('userEmail', "");
 
     UserDetails.isUserLoggedIn = false;
-    UserDetails.userId = "0";
+    UserDetails.userId = 0;
     UserDetails.token = "";
     UserDetails.userName = "";
     UserDetails.userEmail = "";

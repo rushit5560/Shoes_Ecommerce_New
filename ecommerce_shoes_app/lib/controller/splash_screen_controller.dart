@@ -20,7 +20,7 @@ class SplashScreenController extends GetxController {
     onBoardingValue = prefs.getBool(userPrefsData.onboardingKey) ?? false;
     UserDetails.isUserLoggedIn =
         prefs.getBool(userPrefsData.userLoggedInStatusKey) ?? false;
-    UserDetails.userId = prefs.getString(userPrefsData.idKey) ?? "0";
+    UserDetails.userId = prefs.getInt(userPrefsData.idKey) ?? 0;
     UserDetails.token = prefs.getString(userPrefsData.tokenKey) ?? "";
     UserDetails.userName = prefs.getString(userPrefsData.userNameKey) ?? "";
     UserDetails.userEmail = prefs.getString(userPrefsData.userEmailKey) ?? "";
