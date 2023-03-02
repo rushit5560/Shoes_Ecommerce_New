@@ -1,0 +1,45 @@
+class ApiUrl {
+  static const apiMainPath = 'http://shoes.omdemo.co.in/';
+  static const loginApi = "${apiMainPath}api/login";
+  static const registerApi = '${apiMainPath}api/register';
+  static const bannerApi = '${apiMainPath}api/banner';
+  static const productApi = '${apiMainPath}api/product';
+  static const categoryApi = '${apiMainPath}api/category';
+  static const categoryCollectionApi = '${apiMainPath}api/categoryproduct';
+  static const productDetailApi = '${apiMainPath}api/productdetails';
+  static const addToCartApi = '${apiMainPath}api/addtocart';
+  static const userCartApi = '${apiMainPath}api/usercart';
+  static const addCartQtyApi = '${apiMainPath}api/addcartqty';
+  static const deleteCartProductApi = '${apiMainPath}api/deletecart';
+  static const featuredProductApi = '${apiMainPath}api/productfeatured';
+  static const productReviewApi = '${apiMainPath}api/reviewget';
+  static const addProductReviewApi = '${apiMainPath}api/reviewadd';
+  static const updateUserProfileApi = '${apiMainPath}api/userprofile';
+  static const contactUsApi = '${apiMainPath}api/contactus';
+  static const changePasswordApi = '${apiMainPath}api/changepassword';
+  static const countryApi = '${apiMainPath}api/country';
+  static const stateApi = '${apiMainPath}api/states';
+  static const cityApi = '${apiMainPath}api/city';
+  static const blogsApi = '${apiMainPath}api/blog';
+  static const blogDetailApi = '${apiMainPath}api/blogdetails';
+  static const addProductWishlistApi = '${apiMainPath}api/addwishlist';
+  static const userWishListApi = '${apiMainPath}api/userwishlist';
+  static const deleteWishListApi = '${apiMainPath}api/deletewishlist';
+  static const testimonialApi = '${apiMainPath}api/testimonials';
+  static const addOrderApi = '${apiMainPath}api/orderadd';
+  static const addUserBillingAddressApi = '${apiMainPath}api/usersbilling';
+  static const addUserShippingAddressApi = '${apiMainPath}api/usersshipping';
+  static const userAllAddressApi = '${apiMainPath}api/usersaddress';
+  static const userTotalOrderApi = '${apiMainPath}api/usertotalorder';
+  static const orderDetailsApi = '${apiMainPath}api/orderdetails';
+  static const getProfileApi = "${apiMainPath}api/profile/";
+  static const getBrandBannerApi = "${apiMainPath}api/brandbanner/";
+  static const getRelatedProductsApi = "${apiMainPath}api/related/";
+  static const forgotPasswordApi = "${apiMainPath}api/forgetpassword";
+  static const searchProductsApi = "${apiMainPath}api/searchproduct";
+  /// Add, Get Blog comment API
+  static const addBlogCommentApi = "${apiMainPath}api/addblogcomment";
+  static const getBlogCommentApi = "${apiMainPath}api/getcomment/";
+  static const invoicePdfPrefix = "${apiMainPath}public/";
+  static const invoicePdfSuffix = ".pdf";
+}
