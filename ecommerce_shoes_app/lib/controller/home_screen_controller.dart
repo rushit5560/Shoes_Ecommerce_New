@@ -9,6 +9,7 @@ import 'package:ecommerce_shoes_app/models/home_screen_model/banner_model.dart';
 import 'package:get/get.dart';
 
 class HomeScreenController extends GetxController {
+  var activeIndex = 0.obs;
   RxBool isLoading = false.obs;
   RxBool isStatus = false.obs;
 
@@ -27,6 +28,7 @@ class HomeScreenController extends GetxController {
       // log('Banner Body : ${response.body}');
 
       BannerData bannerList = BannerData.fromJson(json.decode(response.body));
+      log("getBannerFunction: ${response.body}");
       isStatus = bannerList.success.obs;
 
       if (isStatus.value) {
@@ -37,22 +39,24 @@ class HomeScreenController extends GetxController {
       }
     } catch (e) {
       log('Banner Error : $e');
-    }
-
-    await getFeaturedProductFunction();
+    } /*finally {
+      isLoading(false);
+    }*/
+    // await getFeaturedProductFunction();
+    isLoading(false);
   }
 
-  Future<void> getFeaturedProductFunction() async {
+/*  Future<void> getFeaturedProductFunction() async {
     isLoading(true);
     String url = ApiUrl.featuredProductApi;
     log('Url : $url');
 
     try {
       http.Response response = await http.get(Uri.parse(url));
-log('Featured Product Body : ${response.body}');
+       log('Featured Product Body : ${response.body}');
       FeaturedProductData featuredProductData =
           FeaturedProductData.fromJson(json.decode(response.body));
-      
+
       isStatus = featuredProductData.success.obs;
 
       if (isStatus.value) {
@@ -64,10 +68,13 @@ log('Featured Product Body : ${response.body}');
       log('FeaturedProduct Error : $e');
     }
 
-    await getTestimonialFunction();
-  }
+    //await getTestimonialFunction();
+    finally{
+      isLoading(false);
+    }
+  }*/
 
-  Future<void> getTestimonialFunction() async {
+ /* Future<void> getTestimonialFunction() async {
     isLoading(true);
     String url = ApiUrl.testimonialApi;
     log('Url : $url');
@@ -124,7 +131,7 @@ log('Featured Product Body : ${response.body}');
 
     isLoading(false);
   }
-
+*/
   @override
   void onInit() {
     initMethod();
@@ -133,5 +140,6 @@ log('Featured Product Body : ${response.body}');
 
   initMethod() async {
     await getBannerFunction();
+   // await getFeaturedProductFunction();
   }
 }
